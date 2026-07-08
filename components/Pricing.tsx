@@ -5,28 +5,29 @@ import Reveal from "./motion/Reveal";
 
 const plans = [
   {
-    tier: "Setup",
-    price: "$499",
-    period: "one-time",
-    desc: "Includes build and integration with your existing intake (form/email forwarding).",
+    tier: "Bas",
+    price: "449 kr",
+    suffix: "/mån",
+    period: "upp till 50 förfrågningar/månad",
+    desc: "E-post- och formulärintag, med ett grundläggande pris-utkast för varje förfrågan.",
     rotate: -2,
     highlight: false,
   },
   {
     tier: "Standard",
-    price: "$59",
-    suffix: "/mo",
-    period: "up to 100 leads/month",
-    desc: "Covers API usage and minor ongoing support — small tweaks and bug fixes. New features quoted separately.",
+    price: "799 kr",
+    suffix: "/mån",
+    period: "upp till 200 förfrågningar/månad",
+    desc: "SMS-notiser, ROT-avdragskalkyl inkluderad, och upp till 3 användare.",
     rotate: 0,
     highlight: true,
   },
   {
-    tier: "Growth",
-    price: "$79",
-    suffix: "/mo",
-    period: "above 100 leads/month",
-    desc: "Same coverage as Standard, scaled for higher lead volume.",
+    tier: "Firma",
+    price: "1 490 kr",
+    suffix: "/mån",
+    period: "obegränsat antal förfrågningar",
+    desc: "Obegränsade användare, prioriterad support och anpassade prislistor per yrkeskategori.",
     rotate: 2,
     highlight: false,
   },
@@ -36,7 +37,7 @@ export default function Pricing() {
   return (
     <section id="pricing" className="mx-auto max-w-5xl px-6 py-24">
       <h2 className="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
-        Pricing
+        Priser
       </h2>
       <div className="relative mt-16">
         <svg
@@ -60,7 +61,7 @@ export default function Pricing() {
             <div key={p.tier} className="relative">
               {p.highlight && (
                 <span className="absolute -top-3 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-amber px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white shadow-[0_0_16px_-2px_rgba(217,146,42,0.7)]">
-                  Most popular
+                  Mest populär
                 </span>
               )}
               <motion.div
@@ -102,7 +103,10 @@ export default function Pricing() {
       </div>
       <Reveal delay={0.3}>
         <p className="mt-10 text-sm text-ink/50">
-          No long-term contract. Cancel anytime.
+          Ingen bindningstid. Avsluta när du vill.
+        </p>
+        <p className="mt-1 text-sm text-ink/50">
+          Inget kreditkort krävs för att komma igång. Igång inom 24 timmar.
         </p>
       </Reveal>
     </section>

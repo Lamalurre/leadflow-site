@@ -15,8 +15,8 @@ const steps: {
 }[] = [
   {
     n: "01",
-    title: "Leads come in the way they already do.",
-    body: "Website form, forwarded email, DM — no new tools to learn.",
+    title: "Förfrågningar kommer in som vanligt.",
+    body: "Formulär på hemsidan, vidarebefordrad e-post, SMS — inga nya verktyg att lära dig.",
     left: 14,
     top: 70,
     labelTop: false,
@@ -24,8 +24,8 @@ const steps: {
   },
   {
     n: "02",
-    title: "AI reads and prepares each one.",
-    body: "Estimated price based on your rates, missing info flagged, priority ranked, and a ready-to-send reply drafted in your voice.",
+    title: "AI läser och förbereder varje förfrågan.",
+    body: "Ett pris-utkast tas fram utifrån din prislista, saknad information flaggas, förfrågan prioriteras, och ett svarsförslag skrivs i din ton.",
     left: 50,
     top: 170,
     labelTop: true,
@@ -33,8 +33,8 @@ const steps: {
   },
   {
     n: "03",
-    title: "You review and send.",
-    body: "Nothing reaches a customer without your approval — no risk of the AI quoting the wrong price or sending an off-tone message.",
+    title: "Du granskar och skickar.",
+    body: "Inget når kunden utan ditt godkännande — ingen risk att AI:n anger fel pris eller skickar ett missvisande meddelande.",
     left: 86,
     top: 90,
     labelTop: false,
@@ -55,7 +55,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="mx-auto max-w-5xl px-6 py-24">
       <h2 className="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
-        How it works
+        Så funkar det
       </h2>
 
       {/* desktop: curved connecting timeline */}
@@ -150,8 +150,8 @@ export default function HowItWorks() {
 
       <div className="mt-14 rounded-2xl border border-navy/30 bg-navy/[0.06] px-8 py-6">
         <p className="text-center font-serif text-lg italic sm:text-xl">
-          Human-approved by design — you&apos;re always the last check before
-          anything is sent.
+          Människogranskat från grunden — du är alltid sista kollen innan
+          något skickas.
         </p>
       </div>
     </section>

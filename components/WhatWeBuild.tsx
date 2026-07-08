@@ -3,16 +3,16 @@ import Reveal from "./motion/Reveal";
 import { RevealGroup, RevealItem } from "./motion/RevealGroup";
 
 const alsoAvailable = [
-  { name: "Chatbots", desc: "Website chat that qualifies and routes visitors." },
-  { name: "Support Automation", desc: "AI-drafted responses to repeat support questions." },
-  { name: "Reception Agents", desc: "AI phone/chat reception for missed calls and after hours." },
+  { name: "Chattbotar", desc: "Webbchatt som kvalificerar och styr besökare rätt." },
+  { name: "Kundtjänstautomation", desc: "AI-skrivna svar på återkommande supportfrågor." },
+  { name: "Receptionsagenter", desc: "AI-reception för missade samtal och efter stängningstid." },
 ];
 
 export default function WhatWeBuild() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-24">
       <h2 className="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
-        What we build
+        Vad vi bygger
       </h2>
       <Reveal delay={0.1}>
         <Link
@@ -20,19 +20,21 @@ export default function WhatWeBuild() {
           className="mt-10 block rounded-2xl border border-border bg-ivory-card p-8 transition hover:border-navy/40 hover:shadow-sm"
         >
           <span className="text-xs font-semibold uppercase tracking-wide text-navy">
-            Flagship
+            Flaggskepp
           </span>
           <h3 className="mt-2 font-serif text-2xl font-medium">
-            Lead Conversion Automation
+            Första svaret
           </h3>
           <p className="mt-3 max-w-2xl leading-relaxed text-ink/70">
-            The system shown above — every inbound inquiry read, priced
-            against your rates, checked for missing details, ranked by
-            priority, and turned into a ready-to-send reply, with you
-            approving the final message before it ever reaches a customer.
+            Systemet ovan — varje inkommande förfrågan läses, prissätts
+            utifrån din prislista, kontrolleras för saknad information,
+            prioriteras och blir ett svarsförslag redo att skickas, med dig
+            som godkänner sista ordet. Ett komplement till ditt befintliga
+            offertverktyg — vi äger det första svaret, inte hela
+            offertprocessen.
           </p>
           <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-navy">
-            See how it works →
+            Se hur det funkar →
           </span>
         </Link>
       </Reveal>

@@ -53,7 +53,7 @@ export default function Contact() {
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="name" className="block text-sm font-medium">
-              Name
+              Namn
             </label>
             <input
               id="name"
@@ -65,7 +65,7 @@ export default function Contact() {
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium">
-              Email
+              E-post
             </label>
             <input
               id="email"
@@ -78,19 +78,19 @@ export default function Contact() {
         </div>
         <div>
           <label htmlFor="businessType" className="block text-sm font-medium">
-            Business type
+            Bransch
           </label>
           <input
             id="businessType"
             name="businessType"
             type="text"
-            placeholder="e.g. residential cleaning, HVAC, marketing agency"
+            placeholder="t.ex. bygg, VVS, el, målare"
             className="mt-1.5 w-full rounded-lg border border-border bg-ivory px-4 py-2.5 outline-none focus:border-navy"
           />
         </div>
         <div>
           <label htmlFor="message" className="block text-sm font-medium">
-            Message
+            Meddelande
           </label>
           <textarea
             id="message"
@@ -105,16 +105,16 @@ export default function Contact() {
           disabled={status === "submitting"}
           className="w-full rounded-full bg-navy px-7 py-3.5 text-base font-medium text-white shadow-[0_0_25px_-6px_rgba(74,108,247,0.7)] transition hover:bg-navy-dark disabled:opacity-60"
         >
-          {status === "submitting" ? "Sending..." : "Send message"}
+          {status === "submitting" ? "Skickar..." : "Skicka meddelande"}
         </button>
         {status === "success" && (
           <p className="text-center text-sm text-green">
-            Thanks — your message has been sent. We&apos;ll be in touch soon.
+            Tack — ditt meddelande har skickats. Vi hör av oss snart.
           </p>
         )}
         {status === "error" && (
           <p className="text-center text-sm text-red-700">
-            Something went wrong. Please try again or email{" "}
+            Något gick fel. Försök igen eller mejla oss på{" "}
             <a href={`mailto:${CONTACT_EMAIL}`} className="underline">
               {CONTACT_EMAIL}
             </a>

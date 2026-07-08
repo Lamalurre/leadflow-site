@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LeadFlow — Stop losing leads to slow replies",
+  title: "Sylvor — Sluta förlora jobb till långsamma svar",
   description:
-    "LeadFlow reads your incoming inquiries, estimates pricing, flags what's missing, and drafts a ready-to-send reply — you stay in control of every message that goes out.",
+    "Sylvor fångar upp dina kunders förfrågningar, prioriterar dem, tar fram ett snabbt pris-utkast och skriver ett svarsförslag — du godkänner alltid innan något skickas.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="sv"
       className={`${fraunces.variable} ${inter.variable} h-full dark`}
     >
       <body className="min-h-full flex flex-col bg-ivory text-ink antialiased relative">

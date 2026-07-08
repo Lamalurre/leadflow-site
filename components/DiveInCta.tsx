@@ -49,13 +49,13 @@ export default function DiveInCta() {
 
         <Reveal delay={0.15} className="relative">
           <h2 className="font-serif text-4xl font-medium tracking-tight sm:text-5xl">
-            Ready to stop losing leads to slow replies?
+            Redo att sluta förlora jobb till långsamma svar?
           </h2>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
             className="mt-8 inline-block rounded-full border border-ink/20 bg-ivory px-7 py-3.5 text-base font-medium text-ink transition hover:border-ink/40"
           >
-            Book a free call
+            Boka ett gratis samtal
           </a>
         </Reveal>
       </motion.div>

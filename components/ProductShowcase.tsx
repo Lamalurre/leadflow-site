@@ -7,10 +7,10 @@ import StepIllustration from "./StepIllustration";
 import Reveal from "./motion/Reveal";
 
 const tabs = [
-  { label: "Lead inbox", variant: "inbox" as const },
-  { label: "Priority & price", variant: "price" as const },
-  { label: "Reply draft", variant: "draft" as const },
-  { label: "Approve & send", variant: "approve" as const },
+  { label: "Inkorg", variant: "inbox" as const },
+  { label: "Prioritet & pris", variant: "price" as const },
+  { label: "Svarsutkast", variant: "draft" as const },
+  { label: "Godkänn & skicka", variant: "approve" as const },
 ];
 
 export default function ProductShowcase() {
@@ -24,12 +24,12 @@ export default function ProductShowcase() {
       <div className="mx-auto max-w-5xl text-center">
         <Reveal>
           <h2 className="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
-            See it in action
+            Se det i praktiken
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-ink/70">
-            A lead being triaged, priced, and drafted — start to finish.
-            Every step is reviewed by you before anything reaches a
-            customer.
+            En förfrågan som prioriteras, prissätts och besvaras — från
+            start till mål. Varje steg granskas av dig innan något når
+            kunden.
           </p>
         </Reveal>
 
@@ -95,7 +95,7 @@ export default function ProductShowcase() {
             href="/lead-conversion-automation"
             className="inline-flex items-center gap-1 font-medium text-navy hover:text-navy-dark"
           >
-            See the full flow →
+            Se hela flödet →
           </Link>
         </Reveal>
       </div>

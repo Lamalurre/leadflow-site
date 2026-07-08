@@ -8,67 +8,67 @@ import RevealStep from "@/components/motion/RevealStep";
 import { RevealGroup, RevealItem } from "@/components/motion/RevealGroup";
 
 export const metadata: Metadata = {
-  title: "Lead Conversion Automation — LeadFlow",
+  title: "Första svaret — Sylvor",
   description:
-    "How LeadFlow triages, prices, and drafts replies to your inbound leads — with you approving every message before it sends.",
+    "Så fångar och prioriterar Sylvor dina inkommande förfrågningar och skriver ett svarsförslag — du godkänner alltid innan något skickas.",
 };
 
 const steps = [
   {
     variant: "inbox" as const,
-    title: "Leads come in the way they already do.",
-    body: "Website form, forwarded email, DM — no new tools to learn. Every inquiry lands in one place, in the order it arrives, so nothing sits buried in an inbox.",
+    title: "Förfrågningar kommer in som vanligt.",
+    body: "Formulär på hemsidan, vidarebefordrad e-post, SMS — inga nya verktyg att lära dig. Varje förfrågan hamnar på ett ställe, i den ordning den kommer in, så inget blir liggande i en inkorg.",
     rotate: -3,
   },
   {
     variant: "price" as const,
-    title: "AI reads and prepares each one.",
-    body: "Estimated price based on your rates, and priority ranked so the urgent ones surface first.",
+    title: "AI läser och förbereder varje förfrågan.",
+    body: "Ett pris-utkast tas fram utifrån din prislista, och förfrågan prioriteras så att de mest brådskande hamnar överst.",
     rotate: 2,
   },
   {
     variant: "draft" as const,
-    title: "A reply gets drafted in your voice.",
-    body: "Missing info flagged, and a ready-to-send reply drafted from the original inquiry — so you're editing, not writing from scratch.",
+    title: "Ett svarsförslag skrivs i din ton.",
+    body: "Saknad information flaggas, och ett svarsförslag skrivs utifrån den ursprungliga förfrågan — du redigerar, du skriver inte från noll.",
     rotate: -2,
   },
   {
     variant: "approve" as const,
-    title: "You review and send.",
-    body: "Nothing reaches a customer without your approval. Edit the price, tweak the tone, or send as-is — no risk of the AI quoting the wrong number or sending an off-tone message under your name.",
+    title: "Du granskar och skickar.",
+    body: "Inget når kunden utan ditt godkännande. Justera priset, ändra tonen, eller skicka som det är — ingen risk att AI:n anger fel belopp eller skickar ett missvisande meddelande i ditt namn.",
     rotate: 3,
   },
 ];
 
 const faqs = [
   {
-    q: "Do I need to switch systems to use LeadFlow?",
-    a: "No. LeadFlow connects to your existing intake — website form or forwarded email — so leads keep arriving exactly the way they already do. There's nothing new for you or your team to learn.",
+    q: "Ersätter detta mitt offertprogram?",
+    a: "Nej. Sylvor ersätter inte ditt offertverktyg — det är ett komplement som fångar och prioriterar förfrågan innan du ens öppnat ditt offertprogram. Du fortsätter använda samma verktyg för själva offerten.",
   },
   {
-    q: "Does the AI send messages automatically?",
-    a: "No. Every reply is drafted for you, but nothing goes out until you approve it. You're always the last check before a message reaches a customer.",
+    q: "Skickar AI:n meddelanden automatiskt?",
+    a: "Nej. Varje svar skrivs som ett förslag, men inget skickas förrän du godkänt det. Du är alltid sista kollen innan ett meddelande når kunden — särskilt viktigt eftersom en accepterad offert är ett bindande avtal.",
   },
   {
-    q: "What does it cost?",
+    q: "Vad kostar det?",
     a: (
       <>
-        A one-time $499 setup, then $59/mo for up to 100 leads and $79/mo
-        above that — no long-term contract. See the full breakdown in{" "}
+        Ingen startavgift — 449–1 490 kr/mån beroende på volym och behov,
+        ingen bindningstid. Se hela prislistan under{" "}
         <Link href="/#pricing" className="text-navy underline">
-          Pricing
+          Priser
         </Link>
         .
       </>
     ),
   },
   {
-    q: "How long does it take to get started?",
-    a: "Most setups are live within a few days of connecting your existing intake — no migration and no downtime for your current process.",
+    q: "Hur snabbt kan jag komma igång?",
+    a: "Fyll i dina uppgifter i formuläret ovan (hur du tar emot förfrågningar idag, samt din prissättning), så är du igång inom 24 timmar. Inget kreditkort krävs förrän du är live och nöjd.",
   },
   {
-    q: "Does this work for my type of business?",
-    a: "It's built for service businesses with repeat inbound inquiries — cleaning services, trades, agencies, and local service providers. If that sounds like you, it's a fit.",
+    q: "Passar det mitt yrke?",
+    a: "Sylvor är byggt för hantverkare och byggfirmor — bygg, VVS, el, målare, snickare — som får förfrågningar löpande. Fungerar även för städ- och flyttfirmor och andra servicebolag med liknande behov.",
   },
 ];
 
@@ -83,19 +83,19 @@ export default function LeadConversionAutomation() {
               href="/"
               className="text-sm font-medium text-ink/50 hover:text-ink"
             >
-              ← Back to LeadFlow
+              ← Tillbaka till Sylvor
             </Link>
             <span className="mt-6 block text-xs font-semibold uppercase tracking-wide text-navy">
-              Flagship
+              Flaggskepp
             </span>
             <h1 className="mt-2 font-serif text-4xl font-medium tracking-tight sm:text-5xl">
-              Lead Conversion Automation
+              Första svaret
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink/70">
-              Every inbound inquiry read, priced against your rates, checked
-              for missing details, ranked by priority, and turned into a
-              ready-to-send reply — with you approving the final message
-              before it ever reaches a customer.
+              Varje inkommande förfrågan läses, prissätts utifrån din
+              prislista, kontrolleras för saknad information, prioriteras
+              och blir ett svarsförslag redo att skickas — med dig som
+              godkänner sista ordet innan något når kunden.
             </p>
           </section>
         </Reveal>
@@ -136,8 +136,8 @@ export default function LeadConversionAutomation() {
           <section className="mx-auto max-w-4xl px-6">
             <div className="rounded-2xl border border-navy/30 bg-navy/[0.06] px-8 py-6">
               <p className="text-center font-serif text-lg italic sm:text-xl">
-                Human-approved by design — you&apos;re always the last check
-                before anything is sent.
+                Människogranskat från grunden — du är alltid sista kollen
+                innan något skickas.
               </p>
             </div>
           </section>
@@ -147,12 +147,12 @@ export default function LeadConversionAutomation() {
           <div className="grid gap-8 sm:grid-cols-2 sm:items-center">
             <RevealStep>
               <h3 className="font-serif text-2xl font-medium">
-                Track performance at a glance
+                Följ resultatet i realtid
               </h3>
               <p className="mt-3 leading-relaxed text-ink/70">
-                A running view of active leads, response times, and pipeline
-                value — so you always know what&apos;s waiting and what
-                it&apos;s worth.
+                En löpande överblick över aktiva förfrågningar, svarstider
+                och potentiellt värde — så du alltid vet vad som väntar och
+                vad det är värt.
               </p>
             </RevealStep>
             <RevealStep fromRight className="flex justify-center">
@@ -164,7 +164,7 @@ export default function LeadConversionAutomation() {
         <section className="mx-auto max-w-3xl px-6 py-20">
           <Reveal>
             <h2 className="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
-              Frequently asked questions
+              Vanliga frågor
             </h2>
           </Reveal>
           <RevealGroup className="mt-8 space-y-3">
@@ -187,13 +187,13 @@ export default function LeadConversionAutomation() {
         <Reveal>
           <section className="mx-auto max-w-3xl px-6 pb-24 text-center">
             <h2 className="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
-              Ready to stop losing leads to slow replies?
+              Redo att sluta förlora jobb till långsamma svar?
             </h2>
             <Link
               href="/#contact"
               className="mt-6 inline-block rounded-full bg-navy px-7 py-3.5 text-base font-medium text-white shadow-[0_0_25px_-6px_rgba(74,108,247,0.7)] transition hover:bg-navy-dark"
             >
-              Book a free call
+              Boka ett gratis samtal
             </Link>
           </section>
         </Reveal>

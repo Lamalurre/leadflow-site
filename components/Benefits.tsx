@@ -4,26 +4,26 @@ import { RevealGroup, RevealItem } from "./motion/RevealGroup";
 const topRow = [
   {
     icon: Zap,
-    title: "No new tools to learn",
-    desc: "Plugs into the form or inbox you already use.",
+    title: "Inga nya verktyg att lära dig",
+    desc: "Kopplas till formuläret eller inkorgen du redan använder.",
   },
   {
     icon: Tag,
-    title: "Priced from your own rate list",
-    desc: "Estimates are calculated from rates you set — not guessed.",
+    title: "Prissatt utifrån din egen prislista",
+    desc: "Uppskattningar beräknas utifrån priser du själv anger — inga gissningar.",
   },
 ];
 
 const bottomRow = [
   {
     icon: Languages,
-    title: "Responds in your customer's language",
-    desc: "Drafts match the tone and language of the original inquiry.",
+    title: "Svarar i rätt ton",
+    desc: "Utkasten matchar tonen i kundens ursprungliga förfrågan.",
   },
   {
     icon: Clock,
-    title: "Always-on triage",
-    desc: "Leads get ranked the moment they arrive, day or night.",
+    title: "Alltid på vakt",
+    desc: "Förfrågningar prioriteras direkt när de kommer in — dag som natt.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function Benefits() {
     <section className="border-y border-border bg-ivory-card px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="font-serif text-3xl font-medium tracking-tight sm:text-4xl">
-          Why LeadFlow
+          Varför Sylvor
         </h2>
 
         <RevealGroup className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -75,9 +75,10 @@ export default function Benefits() {
             <p className="mt-4 font-serif text-5xl font-medium text-navy">
               100%
             </p>
-            <h3 className="mt-2 font-semibold">Human-approved by design</h3>
+            <h3 className="mt-2 font-semibold">Människogranskat från grunden</h3>
             <p className="mt-2 text-sm leading-relaxed text-ink/65">
-              Every reply is drafted, never sent, until you say so.
+              Varje svar skrivs som utkast — skickas aldrig förrän du
+              godkänner.
             </p>
           </RevealItem>
 

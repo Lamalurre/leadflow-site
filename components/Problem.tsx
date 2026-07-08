@@ -2,10 +2,10 @@ import { RevealGroup, RevealItem } from "./motion/RevealGroup";
 import Reveal from "./motion/Reveal";
 
 const problems = [
-  "Inquiries sit unanswered for hours or days",
-  "Every lead gets a generic response, or none",
-  "No way to tell which leads are urgent or high-value",
-  "Follow-ups get forgotten",
+  "Förfrågningar blir liggande i timmar eller dagar",
+  "Varje förfrågan får samma generiska svar — eller inget alls",
+  "Svårt att hålla koll på vad som kommit in via mejl, formulär och SMS när du är ute på jobb",
+  "Uppföljningar glöms bort i stressen",
 ];
 
 export default function Problem() {
@@ -22,8 +22,8 @@ export default function Problem() {
         </RevealGroup>
         <Reveal delay={0.3}>
           <p className="mt-12 font-serif text-xl italic leading-relaxed text-ink/80 sm:text-2xl">
-            Every unanswered inquiry is a customer who books with whoever
-            replied first — usually a competitor.
+            Varje obesvarad förfrågan är ett jobb som går till den som
+            svarade först — oftast en konkurrent.
           </p>
         </Reveal>
       </div>
