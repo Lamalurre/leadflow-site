@@ -12,19 +12,15 @@ const faqs = [
     a: "Bara en trygg bekräftelse på att ni tagit emot förfrågan, t.ex. \"Tack för ditt meddelande, vi återkommer inom kort.\" Aldrig pris eller löften.",
   },
   {
-    q: "Skickas offert automatiskt?",
-    a: "Nej. Offert och pris kräver alltid ditt godkännande innan något skickas till kunden.",
-  },
-  {
     q: "Vad händer om kunden svarar tillbaka?",
     a: "Sylvor läser svaret och tar fram ett nytt svarsförslag — men inget skickas automatiskt. Du godkänner varje gång, precis som första gången.",
   },
   {
-    q: "Fungerar det med email?",
+    q: "Fungerar det med e-post?",
     a: "Ja, e-post är ett av de vanligaste sätten att ta emot leads på och stöds fullt ut från start.",
   },
   {
-    q: "Kommer SMS stödjas?",
+    q: "Kommer SMS att stödjas?",
     a: "Ja, SMS som intagskanal är på väg. Redan idag kan du välja SMS som föredragen notis-kanal.",
   },
   {
@@ -40,11 +36,11 @@ const faqs = [
     a: "Varje ny förfrågan som kommer in via en ansluten kanal — e-post, formulär eller DM — räknas som ett lead.",
   },
   {
-    q: "Hur fungerar trial?",
+    q: "Hur fungerar provperioden?",
     a: "Du testar Sylvor gratis i 7 dagar med full funktionalitet. Inget kreditkort krävs för att komma igång.",
   },
   {
-    q: "Finns bindningstid?",
+    q: "Finns det bindningstid?",
     a: "Nej, ingen bindningstid. Avsluta när du vill.",
   },
   {

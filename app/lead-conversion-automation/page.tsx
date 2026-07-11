@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     q: "Passar det mitt yrke?",
-    a: "Sylvor är byggt för hantverkare och byggfirmor — bygg, VVS, el, målare, snickare — som får förfrågningar löpande. Fungerar även för städ- och flyttfirmor och andra servicebolag med liknande behov.",
+    a: "Sylvor fungerar för de flesta lead-drivna serviceföretag. Hantverkare, städfirmor och flyttfirmor använder Sylvor mest idag, men det funkar lika bra för kliniker, jurister, mäklare och andra branscher där kunden hör sig för hos flera samtidigt.",
   },
 ];
 
