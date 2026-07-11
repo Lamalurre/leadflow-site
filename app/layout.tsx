@@ -15,9 +15,39 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sylvor — Sluta förlora jobb till långsamma svar",
+  metadataBase: new URL("https://sylvor.se"),
+  title: {
+    default: "Sylvor — Sluta förlora jobb till långsamma svar",
+    template: "%s",
+  },
   description:
-    "Sylvor fångar upp dina kunders förfrågningar, prioriterar dem, tar fram ett snabbt pris-utkast och skriver ett svarsförslag — du godkänner alltid innan något skickas.",
+    "Sylvor skickar ett säkert autosvar direkt på inkommande leads, analyserar förfrågan med AI och tar fram ett svarsförslag du godkänner innan det skickas. Byggt för hantverkare, städfirmor, flyttfirmor och andra lead-drivna serviceföretag.",
+  keywords: [
+    "AI leadhantering",
+    "snabbare kundsvar",
+    "offertautomation",
+    "hantverkare AI",
+    "leadrespons",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "sv_SE",
+    siteName: "Sylvor",
+    title: "Sylvor — Sluta förlora jobb till långsamma svar",
+    description:
+      "Säkert autosvar direkt, AI-analys av leadet och ett svarsförslag du godkänner innan det skickas.",
+    url: "https://sylvor.se",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sylvor — Sluta förlora jobb till långsamma svar",
+    description:
+      "Säkert autosvar direkt, AI-analys av leadet och ett svarsförslag du godkänner innan det skickas.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

@@ -15,8 +15,8 @@ import { RevealGroup, RevealItem } from "./motion/RevealGroup";
 
 const industries = [
   { icon: Hammer, label: "Hantverkare", flagship: true },
-  { icon: SprayCan, label: "Städfirmor" },
-  { icon: Truck, label: "Flyttfirmor" },
+  { icon: SprayCan, label: "Städfirmor", flagship: true },
+  { icon: Truck, label: "Flyttfirmor", flagship: true },
   { icon: Wrench, label: "Servicebolag" },
   { icon: Stethoscope, label: "Kliniker" },
   { icon: Scale, label: "Jurister" },
@@ -35,9 +35,9 @@ export default function Industries() {
             Byggt för branscher där snabba svar vinner affärer
           </h2>
           <p className="mt-3 text-ink/70">
-            Sylvor är byggt först för hantverkare och byggfirmor — men
-            fungerar lika bra för alla branscher där kunden hör sig för hos
-            flera samtidigt.
+            Sylvor är byggt först för hantverkare, städfirmor och
+            flyttfirmor — men fungerar lika bra för alla branscher där
+            kunden hör sig för hos flera samtidigt.
           </p>
         </Reveal>
 

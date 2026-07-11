@@ -40,13 +40,8 @@ export default function Pricing() {
         Priser
       </h2>
       <p className="mt-3 max-w-2xl text-ink/60">
-        Priser för Första svaret — vår kärntjänst och den enda tjänsten som
-        går att köpa direkt idag. Chattbotar, kundtjänstautomation och
-        receptionstjänster offereras separat —{" "}
-        <a href="/#contact" className="text-navy underline">
-          kontakta oss
-        </a>
-        .
+        Samma paket oavsett bransch — prissättningen styrs av volym och
+        antal användare, inte vilken typ av verksamhet du driver.
       </p>
       <div className="relative mt-16">
         <svg

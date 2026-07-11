@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Reveal from "./motion/Reveal";
 
-const CONTACT_EMAIL = "Hello.leadflow1@outlook.com";
+const CONTACT_EMAIL = "Kontakt.sylvor@outlook.com";
 
 const streaks = Array.from({ length: 16 }, (_, i) => i * (360 / 16));
 

@@ -9,11 +9,13 @@ import {
   ShieldCheck,
   Lightbulb,
   ListChecks,
+  MessageCircle,
   type LucideIcon,
 } from "lucide-react";
 
 type Variant =
   | "inbox"
+  | "customerlead"
   | "autoreply"
   | "summary"
   | "missing"
@@ -22,8 +24,16 @@ type Variant =
   | "approve"
   | "insights";
 
+export type IllustrationData = {
+  /** Free text used by customerlead (the lead itself), summary (insight line) and draft (reply preview). */
+  text?: string;
+  /** Overrides the missing-info checklist items. */
+  missing?: string[];
+};
+
 const ICONS: Record<Variant, LucideIcon> = {
   inbox: Inbox,
+  customerlead: MessageCircle,
   autoreply: ShieldCheck,
   summary: Lightbulb,
   missing: ListChecks,
@@ -38,6 +48,13 @@ const ACCENTS: Record<
   { text: string; bg: string; glow: string; border: string; rgb: string }
 > = {
   inbox: {
+    text: "text-navy",
+    bg: "bg-navy",
+    glow: "0 0 28px -6px rgba(74,108,247,0.55)",
+    border: "border-navy/30",
+    rgb: "74,108,247",
+  },
+  customerlead: {
     text: "text-navy",
     bg: "bg-navy",
     glow: "0 0 28px -6px rgba(74,108,247,0.55)",
@@ -125,7 +142,7 @@ function InboxBody() {
           Inbox
         </span>
         <span className="rounded-full bg-amber/15 px-2 py-0.5 text-[10px] font-semibold text-amber">
-          3 new
+          3 nya
         </span>
       </div>
       <div className="space-y-2.5">
@@ -169,6 +186,23 @@ function InboxBody() {
   );
 }
 
+function CustomerLeadBody({ data }: { data?: IllustrationData }) {
+  return (
+    <div>
+      <div className="mb-3 flex items-center justify-between">
+        <span className="text-xs font-semibold uppercase tracking-wide text-ink/40">
+          Inkommande lead
+        </span>
+      </div>
+      <div className="rounded-lg border border-border bg-white/[0.02] p-3">
+        <p className="text-[11px] leading-relaxed text-ink/70">
+          &quot;{data?.text || "Hej! Vi undrar om ni har möjlighet att hjälpa oss — kan ni höra av er?"}&quot;
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function AutoreplyBody() {
   return (
     <div>
@@ -194,7 +228,7 @@ function AutoreplyBody() {
   );
 }
 
-function SummaryBody() {
+function SummaryBody({ data }: { data?: IllustrationData }) {
   return (
     <div>
       <div className="mb-3 flex items-center justify-between">
@@ -210,15 +244,15 @@ function SummaryBody() {
       <div className="mt-2.5 flex items-start gap-1.5 rounded-lg border border-amber/25 bg-amber/[0.07] px-3 py-2">
         <Lightbulb size={13} className="mt-0.5 shrink-0 text-amber" />
         <span className="text-[11px] leading-snug text-ink/60">
-          Kunden har bett om snabbt svar
+          {data?.text || "Kunden har bett om snabbt svar"}
         </span>
       </div>
     </div>
   );
 }
 
-function MissingBody() {
-  const items = ["Datum för jobbet", "Kontaktuppgifter"];
+function MissingBody({ data }: { data?: IllustrationData }) {
+  const items = data?.missing?.length ? data.missing : ["Datum för jobbet", "Kontaktuppgifter"];
   return (
     <div>
       <div className="mb-3 flex items-center justify-between">
@@ -278,20 +312,20 @@ function PriceBody() {
           ~4 050 kr
         </p>
         <p className="mt-0.5 text-center text-[11px] text-ink/40">
-          calculated from your rates
+          beräknat utifrån din prislista
         </p>
       </div>
       <div className="flex items-center gap-2 rounded-full border border-amber/30 bg-amber/[0.08] px-3 py-1">
         <span className="h-1.5 w-1.5 rounded-full bg-amber" />
         <span className="text-[11px] font-semibold text-amber">
-          High priority
+          Hög prioritet
         </span>
       </div>
     </div>
   );
 }
 
-function DraftBody() {
+function DraftBody({ data }: { data?: IllustrationData }) {
   const lines = ["94%", "80%", "88%", "42%"];
   return (
     <div>
@@ -301,22 +335,28 @@ function DraftBody() {
         </span>
         <span className="h-2 w-20 rounded-full bg-white/15" />
         <span className="ml-auto rounded-full bg-navy/15 px-2 py-0.5 text-[10px] font-semibold text-navy">
-          Draft
+          Utkast
         </span>
       </div>
-      <div className="space-y-2.5 rounded-lg border border-border bg-white/[0.02] p-3">
-        {lines.map((w, i) => (
-          <span
-            key={i}
-            className="block h-2.5 rounded-full bg-white/12"
-            style={{ width: w, opacity: 1 - i * 0.12 }}
-          />
-        ))}
-        <span className="mt-1 inline-flex items-center gap-1">
-          <span className="h-4 w-0.5 animate-pulse bg-navy" />
-          <PenLine size={12} strokeWidth={2} className="text-navy/70" />
-        </span>
-      </div>
+      {data?.text ? (
+        <div className="rounded-lg border border-border bg-white/[0.02] p-3">
+          <p className="text-[11px] leading-relaxed text-ink/70">{data.text}</p>
+        </div>
+      ) : (
+        <div className="space-y-2.5 rounded-lg border border-border bg-white/[0.02] p-3">
+          {lines.map((w, i) => (
+            <span
+              key={i}
+              className="block h-2.5 rounded-full bg-white/12"
+              style={{ width: w, opacity: 1 - i * 0.12 }}
+            />
+          ))}
+          <span className="mt-1 inline-flex items-center gap-1">
+            <span className="h-4 w-0.5 animate-pulse bg-navy" />
+            <PenLine size={12} strokeWidth={2} className="text-navy/70" />
+          </span>
+        </div>
+      )}
     </div>
   );
 }
@@ -342,11 +382,11 @@ function ApproveBody() {
       <div className="w-full space-y-1.5 rounded-lg border border-green/25 bg-green/[0.06] px-3 py-2.5">
         <div className="flex items-center gap-1.5 text-[11px] text-ink/60">
           <CheckCircle2 size={12} className="text-green" />
-          Price confirmed
+          Pris bekräftat
         </div>
         <div className="flex items-center gap-1.5 text-[11px] text-ink/60">
           <CheckCircle2 size={12} className="text-green" />
-          Tone matched
+          Tonen matchar
         </div>
       </div>
     </div>
@@ -359,7 +399,7 @@ function InsightsBody() {
     <div className="flex flex-col gap-4 py-1">
       <div className="flex items-center justify-between">
         <span className="text-xs font-semibold uppercase tracking-wide text-ink/40">
-          Response time
+          Svarstid
         </span>
         <span className="flex items-center gap-1 text-[11px] font-semibold text-green">
           <TrendingUp size={12} />
@@ -388,8 +428,9 @@ function InsightsBody() {
   );
 }
 
-const BODIES: Record<Variant, () => React.ReactElement> = {
+const BODIES: Record<Variant, (props: { data?: IllustrationData }) => React.ReactElement> = {
   inbox: InboxBody,
+  customerlead: CustomerLeadBody,
   autoreply: AutoreplyBody,
   summary: SummaryBody,
   missing: MissingBody,
@@ -403,10 +444,12 @@ export default function StepIllustration({
   variant,
   rotate = 0,
   className = "",
+  data,
 }: {
   variant: Variant;
   rotate?: number;
   className?: string;
+  data?: IllustrationData;
 }) {
   const Icon = ICONS[variant];
   const accent = ACCENTS[variant];
@@ -420,7 +463,7 @@ export default function StepIllustration({
       >
         <GridBackdrop rgb={accent.rgb} />
         <div className="relative">
-          <Body />
+          <Body data={data} />
         </div>
       </div>
       <span

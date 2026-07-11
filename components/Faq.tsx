@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "./motion/Reveal";
 import { RevealGroup, RevealItem } from "./motion/RevealGroup";
 
@@ -48,7 +49,18 @@ const faqs = [
   },
   {
     q: "Hur hanteras kunddata?",
-    a: "Data lagras säkert och delas aldrig med tredje part. Du äger alltid din data.",
+    a: (
+      <>
+        Data lagras säkert hos våra underleverantörer (bland annat
+        Supabase, OpenAI och Resend) och används bara för att driva
+        tjänsten — den säljs eller delas aldrig i marknadsföringssyfte. Du
+        äger alltid din data. Läs mer i vår{" "}
+        <Link href="/integritetspolicy" className="text-navy underline">
+          integritetspolicy
+        </Link>
+        .
+      </>
+    ),
   },
 ];
 
