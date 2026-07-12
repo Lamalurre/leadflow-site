@@ -104,9 +104,13 @@ export async function POST(req: NextRequest) {
     if (appRes.status === 400) {
       console.error("Sylvor App signup 400:", await appRes.text().catch(() => ""));
       await saveBackupToSupabase(payload, true);
+      // Genuinely rejected signup (e.g. email already registered) — must not
+      // return 200. The wizard only checks res.ok, not the response body, so
+      // a 200 here previously made a FAILED signup show the "you're all
+      // set!" success screen with no account or invite ever created.
       return NextResponse.json(
         { error: "Kunde inte slutföra registreringen automatiskt. Vi hör av oss manuellt." },
-        { status: 200 }
+        { status: 400 }
       );
     }
 
