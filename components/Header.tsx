@@ -11,6 +11,9 @@ export default function Header() {
           <Link href="/#how-it-works" className="hover:text-ink">
             Så funkar det
           </Link>
+          <Link href="/onboarding" className="hover:text-ink">
+            Onboarding
+          </Link>
           <Link href="/#pricing" className="hover:text-ink">
             Priser
           </Link>

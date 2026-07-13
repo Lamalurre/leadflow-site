@@ -22,6 +22,7 @@ const BUSINESS_AREAS: { value: string; label: string }[] = [
   { value: "konsult", label: "Konsultbolag" },
   { value: "maklare", label: "Mäklare" },
   { value: "bilfirma", label: "Bilfirma" },
+  { value: "event", label: "Eventbolag" },
   { value: "other", label: "Annat" },
 ];
 

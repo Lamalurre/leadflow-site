@@ -10,6 +10,8 @@ import {
   Lightbulb,
   ListChecks,
   MessageCircle,
+  Mail,
+  ArrowRight,
   type LucideIcon,
 } from "lucide-react";
 
@@ -22,13 +24,19 @@ type Variant =
   | "price"
   | "draft"
   | "approve"
-  | "insights";
+  | "insights"
+  | "address"
+  | "verified";
 
 export type IllustrationData = {
   /** Free text used by customerlead (the lead itself), summary (insight line) and draft (reply preview). */
   text?: string;
   /** Overrides the missing-info checklist items. */
   missing?: string[];
+  /** Overrides the price variant's amount (default "~4 050 kr"). */
+  price?: string;
+  /** Overrides the price variant's priority pill (default "Hög prioritet"). */
+  priorityLabel?: string;
 };
 
 const ICONS: Record<Variant, LucideIcon> = {
@@ -41,6 +49,8 @@ const ICONS: Record<Variant, LucideIcon> = {
   draft: PenLine,
   approve: CheckCircle2,
   insights: BarChart3,
+  address: Mail,
+  verified: CheckCircle2,
 };
 
 const ACCENTS: Record<
@@ -109,6 +119,20 @@ const ACCENTS: Record<
     glow: "0 0 28px -6px rgba(74,108,247,0.55)",
     border: "border-navy/30",
     rgb: "74,108,247",
+  },
+  address: {
+    text: "text-navy",
+    bg: "bg-navy",
+    glow: "0 0 28px -6px rgba(74,108,247,0.55)",
+    border: "border-navy/30",
+    rgb: "74,108,247",
+  },
+  verified: {
+    text: "text-green",
+    bg: "bg-green",
+    glow: "0 0 28px -6px rgba(63,163,107,0.55)",
+    border: "border-green/30",
+    rgb: "63,163,107",
   },
 };
 
@@ -275,7 +299,7 @@ function MissingBody({ data }: { data?: IllustrationData }) {
   );
 }
 
-function PriceBody() {
+function PriceBody({ data }: { data?: IllustrationData }) {
   return (
     <div className="flex flex-col items-center justify-center gap-5 py-2">
       <div className="relative flex h-24 w-24 items-center justify-center">
@@ -309,7 +333,7 @@ function PriceBody() {
       </div>
       <div>
         <p className="text-center font-serif text-2xl font-medium text-amber">
-          ~4 050 kr
+          {data?.price || "~4 050 kr"}
         </p>
         <p className="mt-0.5 text-center text-[11px] text-ink/40">
           beräknat utifrån din prislista
@@ -318,7 +342,7 @@ function PriceBody() {
       <div className="flex items-center gap-2 rounded-full border border-amber/30 bg-amber/[0.08] px-3 py-1">
         <span className="h-1.5 w-1.5 rounded-full bg-amber" />
         <span className="text-[11px] font-semibold text-amber">
-          Hög prioritet
+          {data?.priorityLabel || "Hög prioritet"}
         </span>
       </div>
     </div>
@@ -428,6 +452,46 @@ function InsightsBody() {
   );
 }
 
+function AddressBody() {
+  return (
+    <div className="flex flex-col items-center justify-center gap-4 py-2">
+      <div className="w-full rounded-lg border border-navy/25 bg-navy/[0.06] px-3 py-2.5">
+        <p className="text-center font-mono text-[12px] text-navy">
+          lead+8f3k2p@sylvor.se
+        </p>
+      </div>
+      <div className="flex items-center gap-2 text-[11px] text-ink/40">
+        <Mail size={13} className="text-navy/60" />
+        Vidarebefordra hit
+        <ArrowRight size={13} className="text-navy/60" />
+      </div>
+    </div>
+  );
+}
+
+function VerifiedBody() {
+  return (
+    <div className="flex flex-col items-center justify-center gap-4 py-2">
+      <div className="relative flex h-20 w-20 items-center justify-center">
+        <span className="pulse-glow absolute inset-0 rounded-full border border-green/25" />
+        <span className="absolute inset-2 rounded-full border border-green/35" />
+        <span
+          className="relative flex h-12 w-12 items-center justify-center rounded-full bg-green text-white"
+          style={{ boxShadow: ACCENTS.verified.glow }}
+        >
+          <CheckCircle2 size={26} strokeWidth={1.75} />
+        </span>
+      </div>
+      <div className="flex items-center gap-2 rounded-full border border-green/30 bg-green/[0.08] px-3 py-1">
+        <span className="h-1.5 w-1.5 rounded-full bg-green" />
+        <span className="text-[11px] font-semibold text-green">
+          Vidarebefordran verifierad
+        </span>
+      </div>
+    </div>
+  );
+}
+
 const BODIES: Record<Variant, (props: { data?: IllustrationData }) => React.ReactElement> = {
   inbox: InboxBody,
   customerlead: CustomerLeadBody,
@@ -438,6 +502,8 @@ const BODIES: Record<Variant, (props: { data?: IllustrationData }) => React.Reac
   draft: DraftBody,
   approve: ApproveBody,
   insights: InsightsBody,
+  address: AddressBody,
+  verified: VerifiedBody,
 };
 
 export default function StepIllustration({
