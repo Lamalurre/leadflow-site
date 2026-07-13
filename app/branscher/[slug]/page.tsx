@@ -69,7 +69,7 @@ const industries: Industry[] = [
     ],
     leadText:
       "Hej! Söker återkommande hemstädning varannan vecka, lägenhet på 65 kvm i city. Vad skulle det kosta?",
-    missing: ["Engångsstäd eller återkommande", "Önskad startvecka"],
+    missing: ["Antal rum och badrum", "Önskat startdatum"],
     price: "~1 450 kr",
     priorityLabel: "Medel prioritet",
   },
