@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BlogCta from "@/components/BlogCta";
 import Reveal from "@/components/motion/Reveal";
 import { blogPosts, getBlogPost } from "@/lib/blog";
 
@@ -38,7 +39,7 @@ export default async function BlogPostPage({
       <Header />
       <main className="flex-1">
         <Reveal>
-          <article className="mx-auto max-w-3xl px-6 py-16">
+          <article className="mx-auto max-w-3xl px-6 pb-24 pt-16">
             <Link
               href="/blogg"
               className="text-sm font-medium text-ink/50 hover:text-ink"
@@ -64,6 +65,7 @@ export default async function BlogPostPage({
         </Reveal>
       </main>
       <Footer />
+      <BlogCta />
     </>
   );
 }

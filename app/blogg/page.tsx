@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BlogCta from "@/components/BlogCta";
 import Reveal from "@/components/motion/Reveal";
 import { RevealGroup, RevealItem } from "@/components/motion/RevealGroup";
 import { blogPosts } from "@/lib/blog";
@@ -30,7 +31,7 @@ export default function BlogIndex() {
           </section>
         </Reveal>
 
-        <RevealGroup className="mx-auto max-w-4xl space-y-6 px-6 py-12">
+        <RevealGroup className="mx-auto max-w-4xl space-y-6 px-6 pb-24 pt-12">
           {[...blogPosts]
             .sort((a, b) => b.date.localeCompare(a.date))
             .map((post) => (
@@ -61,6 +62,7 @@ export default function BlogIndex() {
         </RevealGroup>
       </main>
       <Footer />
+      <BlogCta />
     </>
   );
 }

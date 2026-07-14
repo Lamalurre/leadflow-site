@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
       "Det som faktiskt hjälper är inte att jobba snabbare. Det är att separera 'kunden vet att de blivit sedda' från 'du har hunnit tänka igenom ett riktigt svar'. De två sakerna behöver inte hända samtidigt.",
       "Ett enkelt mottagningsbesked, skickat inom minuter, gör mer nytta än man tror. Det behöver inte innehålla pris eller löften, bara en bekräftelse på att förfrågan kommit fram och att ni återkommer. Kunden slutar leta vidare, och du får tid att svara på riktigt när du faktiskt har tid.",
       "Det är i grunden det Sylvor gör åt de företag som använder det: ett säkert autosvar går ut direkt när en förfrågan kommer in, oavsett om det är sex på morgonen eller en söndagkväll, medan det riktiga svaret väntar på att du ska godkänna det.",
-      "Men principen gäller oavsett vilket verktyg man använder. Om du bara gör en sak av det här inlägget: sätt upp någon form av automatiskt mottagningsbesked, även om det bara är en enkel autosvarsfunktion i din vanliga mejl. Det är skillnaden mellan att kunden väntar och att kunden går vidare till nästa på listan.",
+      "Skillnaden mellan att kunden väntar och att kunden går vidare till nästa på listan handlar sällan om hur bra du faktiskt är på ditt jobb. Den handlar om vem som hörde av sig först. Det är den enda variabeln värd att fixa innan man ens börjar prata om pris eller kvalitet, och det är också varför vi lagt så mycket tid på just den delen i Sylvor.",
     ],
   },
   {
@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-07-01",
     body: [
       "Den vanligaste invändningen jag hör när AI och kundkontakt kommer på tal är rimlig, inte överdriven skepsis: vad händer om systemet lovar något jag inte kan hålla, eller skickar iväg ett mejl i mitt namn som jag aldrig skulle skrivit själv?",
-      "Det är en befogad oro. Det finns gott om exempel på AI-chattbottar som hittat på rabatter, fel priser, eller löften ingen bett dem ge, och det är precis den typen av historia som gör att folk blir försiktiga med hela idén.",
+      "Det är en befogad oro, och den går att lösa med rätt design snarare än att bara hoppas att AI:n gör rätt varje gång.",
       "Men automation och mänsklig kontroll behöver inte vara varandras motsatser. Ett system kan göra det tidskrävande jobbet, läsa igenom en lång förfrågan, sammanfatta den, räkna ett pris, skriva ett första utkast, utan att för den skull ha rätt att trycka på skicka.",
       "Det är precis så vi har byggt Sylvor, delvis för att jag själv skulle bli obekväm med något annat. Det enda som går ut helt automatiskt är ett kort, säkert mottagningsbesked, alltid samma trygga formulering, aldrig ett pris eller ett löfte om leveranstid. Allt annat, offerten, priset, uppföljningen, är ett förslag som ligger och väntar tills du godkänner det.",
       "Skillnaden mot att skriva allt själv är inte att kontrollen försvinner, det är att du slipper det tunga första steget: att läsa igenom, sammanfatta och räkna fram ett förslag från noll varje gång. Du gör fortfarande sista bedömningen. Du gör den bara snabbare.",
@@ -135,8 +135,7 @@ export const blogPosts: BlogPost[] = [
       "Det som gör siffran extra lömsk är att den inte känns som en förlust i stunden. Man märker inte att man tappar en kund, man märker bara att telefonen inte ringer lika ofta som man hoppats, utan att någonsin koppla ihop det med det obesvarade mejlet från tre veckor sen.",
       "Vår egen ROI-kalkylator på hemsidan gör i princip den här uträkningen åt dig: fyll i era egna siffror för antal missade förfrågningar, genomsnittligt projektvärde och en rimlig andel som hade blivit jobb, och se vad det landar på per månad och per år.",
       "Poängen med att räkna är inte att skrämmas. Det är att gå från en känsla, 'vi borde nog svara snabbare', till en siffra man faktiskt kan agera på. Det ena är lätt att skjuta upp. Det andra är svårare att ignorera.",
-      "Om du gör räkningen och siffran känns hög, börja inte med att köpa något. Börja med att sätta upp ett enkelt automatiskt mottagningsbesked, gratis eller nästan gratis i de flesta mejlsystem. Det löser inte allt, men det är den billigaste första åtgärden mot exakt det här läckaget.",
-      "Sen, när du väl vet ungefär hur stort problemet är, blir det lättare att bedöma om ett system som Sylvor, eller något liknande, är värt kostnaden för er. Utan siffran är det bara en gissning åt båda hållen.",
+      "Om du gör räkningen och siffran känns hög är nästa steg inte att gissa dig till en lösning. Det är att se vad som faktiskt får ner den siffran snabbast: ett tryggt mottagningsbesked som går ut på sekunder, och ett pris som räknas fram innan kunden hunnit gå vidare till nästa firma på listan. Det är precis den kombinationen Sylvor är byggt kring.",
     ],
   },
   {
@@ -152,8 +151,7 @@ export const blogPosts: BlogPost[] = [
       "Direktmejl är motsatsen. Lägsta möjliga tröskel för kunden, men ofta minimalt med information. 'Hej, kan ni hjälpa oss?' utan mer är vanligare än man kanske tror, särskilt från kunder som redan känner till er sen tidigare eller fått er rekommenderad.",
       "Sociala medier ligger nånstans mittemellan, beroende på plattform. Ett meddelande på Instagram är ofta lika kort som ett mejl, men kommer med en helt annan förväntan på snabbt svar, eftersom appen i sig känns direkt och personlig på ett sätt mejl inte gör.",
       "Det som faktiskt spelar roll, mer än vilken kanal som är bäst, är att ingen av dem hamnar i ett hörn ingen kollar. Jag har sett firmor med ett perfekt formulär på hemsidan som samtidigt missar hälften av sina Facebook-meddelanden, för att ingen kommer ihåg att kolla den appen varje dag.",
-      "Sylvor löser den delen genom att samla in via samma väg oavsett källa: vidarebefordra formulärnotiser och direktmejl till en och samma adress, så blir båda automatiskt ett lead i samma inkorg, utan att du behöver hålla koll på flera olika ställen.",
-      "Men lösningen behöver inte vara ett verktyg specifikt. Även en enkel regel, som att allt vidarebefordras till en delad mejladress som någon faktiskt läser varje dag, löser större delen av problemet. Det viktiga är inte kanalen. Det är att ingenting tystnar bara för att det kom in på ett ovanligt sätt.",
+      "Det som faktiskt spelar roll är inte vilken kanal som är bäst, utan att ingenting tystnar bara för att det kom in på ett ovanligt sätt. Att samla alla kanaler i samma inkorg, med samma automatik oavsett väg in, är den delen som är svårast att lappa ihop själv och lättast att lösa med rätt verktyg. Det är precis vad Sylvor gör: vidarebefordra formulärnotiser och direktmejl till samma adress, så blir båda automatiskt ett lead i samma inkorg, oavsett vilken väg de kom in.",
     ],
   },
   {
