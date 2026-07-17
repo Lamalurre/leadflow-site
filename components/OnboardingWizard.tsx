@@ -26,7 +26,7 @@ const BUSINESS_AREAS: { value: string; label: string }[] = [
   { value: "other", label: "Annat" },
 ];
 
-const TRADES = ["Bygg", "VVS", "El", "Målare", "Snickare", "Annat"];
+const TRADES = ["Bygg", "VVS", "El", "Målare", "Snickare", "Golvläggare", "Annat"];
 
 const LEAD_SOURCES: { value: string; label: string }[] = [
   { value: "form", label: "Formulär på hemsidan" },
@@ -843,7 +843,7 @@ export default function OnboardingWizard() {
                     <div className="mt-2 flex gap-6">
                       {[
                         { value: "email", label: "E-post" },
-                        { value: "sms", label: "SMS" },
+                        { value: "sms", label: "SMS (kräver Standard eller Firma)" },
                       ].map((n) => (
                         <label
                           key={n.value}
