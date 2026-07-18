@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -65,6 +66,7 @@ export default function RootLayout({
         <div className="relative z-10 flex min-h-full flex-1 flex-col">
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
